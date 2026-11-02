@@ -372,7 +372,7 @@ private void showCard(String cardName) {
     }//GEN-LAST:event_txtregisterActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-  String id = txtPatientID.getText().trim();
+          String id = txtPatientID.getText().trim();
     String name = txtPatientName.getText().trim();
     String ageText = txtAge.getText().trim();
     String reason = txtReason.getText().trim();
