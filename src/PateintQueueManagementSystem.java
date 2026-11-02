@@ -104,6 +104,7 @@ private void showCard(String cardName) {
         txtregister.setText("Register Patient");
         txtregister.addActionListener(this::txtregisterActionPerformed);
 
+        txtWaiting.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-waiting-room-24.png")); // NOI18N
         txtWaiting.setText("Display Waiting Patient");
         txtWaiting.addActionListener(this::txtWaitingActionPerformed);
 
@@ -124,7 +125,7 @@ private void showCard(String cardName) {
                 .addComponent(txtWaiting)
                 .addGap(44, 44, 44)
                 .addComponent(jButton8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtsearch)
                 .addContainerGap())
         );
@@ -202,7 +203,7 @@ private void showCard(String cardName) {
             .addGroup(txtRegisterPatientLayout.createSequentialGroup()
                 .addGap(203, 203, 203)
                 .addComponent(jLabel1)
-                .addGap(0, 220, Short.MAX_VALUE))
+                .addGap(0, 240, Short.MAX_VALUE))
         );
         txtRegisterPatientLayout.setVerticalGroup(
             txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,7 +266,7 @@ private void showCard(String cardName) {
                     .addGroup(txtDisplayLayout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(jLabel6)))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         txtDisplayLayout.setVerticalGroup(
             txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,7 +315,7 @@ private void showCard(String cardName) {
             .addGroup(txtSearchLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(17, 17, 17))
         );
