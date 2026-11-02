@@ -108,9 +108,11 @@ private void showCard(String cardName) {
         txtWaiting.setText("Display Waiting Patient");
         txtWaiting.addActionListener(this::txtWaitingActionPerformed);
 
+        jButton8.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-call-24.png")); // NOI18N
         jButton8.setText("Call Patient");
         jButton8.addActionListener(this::jButton8ActionPerformed);
 
+        txtsearch.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-search-bar-24.png")); // NOI18N
         txtsearch.setText("Search Patient");
         txtsearch.addActionListener(this::txtsearchActionPerformed);
 
@@ -119,13 +121,13 @@ private void showCard(String cardName) {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap()
                 .addComponent(txtregister)
-                .addGap(35, 35, 35)
+                .addGap(29, 29, 29)
                 .addComponent(txtWaiting)
-                .addGap(44, 44, 44)
+                .addGap(18, 18, 18)
                 .addComponent(jButton8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(txtsearch)
                 .addContainerGap())
         );
@@ -137,7 +139,7 @@ private void showCard(String cardName) {
                     .addComponent(txtregister)
                     .addComponent(txtWaiting)
                     .addComponent(jButton8)
-                    .addComponent(txtsearch))
+                    .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14))
         );
 
@@ -203,7 +205,7 @@ private void showCard(String cardName) {
             .addGroup(txtRegisterPatientLayout.createSequentialGroup()
                 .addGap(203, 203, 203)
                 .addComponent(jLabel1)
-                .addGap(0, 240, Short.MAX_VALUE))
+                .addGap(0, 268, Short.MAX_VALUE))
         );
         txtRegisterPatientLayout.setVerticalGroup(
             txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -266,7 +268,7 @@ private void showCard(String cardName) {
                     .addGroup(txtDisplayLayout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(jLabel6)))
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         txtDisplayLayout.setVerticalGroup(
             txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,7 +317,7 @@ private void showCard(String cardName) {
             .addGroup(txtSearchLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(17, 17, 17))
         );
