@@ -487,10 +487,7 @@ private void showCard(String cardName) {
     }
 */
 
-        ParentPanel.removeAll();
-        ParentPanel.add(txtSearch);
-        ParentPanel.repaint();
-        ParentPanel.revalidate(); 
+ 
     // TODO add your handling code here:
     }//GEN-LAST:event_txtsearchActionPerformed
 
