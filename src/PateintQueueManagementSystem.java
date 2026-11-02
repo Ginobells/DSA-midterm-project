@@ -41,7 +41,7 @@ private void displayWaitingPatients() {
         for (Patient p : patients) {
 
             result.append(number++)
-                  .append(". ")
+                  .append(".  ")
                   .append(p.toString())
                   .append("\n\n");
         }
