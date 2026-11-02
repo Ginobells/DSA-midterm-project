@@ -31,11 +31,6 @@
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                      <Component id="txtregister" min="-2" pref="143" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="51" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
@@ -47,17 +42,19 @@
                                   <Component id="Waitingpatients" min="-2" max="-2" attributes="0"/>
                                   <Component id="TotalRegistered" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                      <Component id="TotalRegistered1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="Waitingpatients1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TotalRegistered1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="Waitingpatients1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
+                      <Component id="txtregister" min="-2" pref="143" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -71,14 +68,14 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Component id="txtregister" min="-2" pref="46" max="-2" attributes="0"/>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="63" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="TotalRegistered1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TotalRegistered" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Waitingpatients1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Waitingpatients" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -95,6 +92,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="txtregister">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\S-300V5A\Downloads\icons8-register-24.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Register Patient"/>
       </Properties>
       <Events>
@@ -210,22 +210,22 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="TotalRegistered">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="TotalRegistered "/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Waitingpatients">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Waiting Patients"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="TotalRegistered1">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\S-300V5A\Downloads\icons8-bill-20.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Total Registered"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Waitingpatients1">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\S-300V5A\Downloads\icons8-waiting-room-24.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Waiting Patients"/>
       </Properties>
     </Component>
