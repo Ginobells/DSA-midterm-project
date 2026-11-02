@@ -144,7 +144,7 @@ private void showCard(String cardName) {
         ParentPanel.setBackground(new java.awt.Color(51, 255, 51));
         ParentPanel.setLayout(new java.awt.CardLayout());
 
-        txtRegisterPatient.setBackground(new java.awt.Color(204, 204, 204));
+        txtRegisterPatient.setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Register Patient");
