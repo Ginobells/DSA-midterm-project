@@ -360,11 +360,7 @@ private void showCard(String cardName) {
 
    displayWaitingPatients();
    showCard("card3");
-
-   
-
-
-                  
+              
     }//GEN-LAST:event_txtWaitingActionPerformed
 
     private void txtregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtregisterActionPerformed
@@ -376,7 +372,7 @@ private void showCard(String cardName) {
     }//GEN-LAST:event_txtregisterActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-          String id = txtPatientID.getText().trim();
+    String id = txtPatientID.getText().trim();
     String name = txtPatientName.getText().trim();
     String ageText = txtAge.getText().trim();
     String reason = txtReason.getText().trim();
@@ -424,8 +420,6 @@ private void showCard(String cardName) {
         JOptionPane.showMessageDialog(this,
                 "Age must contain numbers only!");
     }
-
-
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -451,7 +445,7 @@ private void showCard(String cardName) {
 
     displayWaitingPatients();
 
-    // TODO add your handling code here:
+    
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void txtsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsearchActionPerformed
