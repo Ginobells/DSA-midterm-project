@@ -35,10 +35,6 @@
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="txtregister" min="-2" pref="143" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -46,12 +42,16 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="Waitingpatients1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="TotalRegistered" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="TotalRegistered1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                      <Component id="txtregister" min="-2" pref="143" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
@@ -65,9 +65,9 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="txtregister" min="-2" pref="46" max="-2" attributes="0"/>
-              <EmptySpace pref="19" max="32767" attributes="0"/>
+              <EmptySpace pref="59" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="TotalRegistered" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TotalRegistered1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -153,12 +153,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="TotalRegistered1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="TotalRegistered"/>
+        <Property name="text" type="java.lang.String" value="Total Registered"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="Waitingpatients1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="WaitingPatients"/>
+        <Property name="text" type="java.lang.String" value="Waiting Patients"/>
       </Properties>
     </Component>
   </SubComponents>
