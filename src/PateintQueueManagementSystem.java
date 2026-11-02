@@ -149,6 +149,7 @@ private void showCard(String cardName) {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Register Patient");
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-id-20.png"))); // NOI18N
         jLabel2.setText("Patient ID");
 
         jLabel3.setText("Patient Name");
