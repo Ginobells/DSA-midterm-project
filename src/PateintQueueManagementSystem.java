@@ -263,21 +263,21 @@ private void showCard(String cardName) {
             .addGroup(txtDisplayLayout.createSequentialGroup()
                 .addGroup(txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(txtDisplayLayout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(txtDisplayLayout.createSequentialGroup()
                         .addGap(178, 178, 178)
-                        .addComponent(jLabel6)))
-                .addContainerGap(120, Short.MAX_VALUE))
+                        .addComponent(jLabel6))
+                    .addGroup(txtDisplayLayout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         txtDisplayLayout.setVerticalGroup(
             txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(txtDisplayLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                .addGap(26, 26, 26)
+                .addGap(38, 38, 38)
                 .addGroup(txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
@@ -288,8 +288,10 @@ private void showCard(String cardName) {
 
         txtSearch.setBackground(new java.awt.Color(51, 255, 51));
 
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-name-tag-20.png")); // NOI18N
         jLabel7.setText("Patient ID");
 
+        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-search-bar-24.png")); // NOI18N
         jButton5.setText("Search");
         jButton5.addActionListener(this::jButton5ActionPerformed);
 
@@ -337,7 +339,7 @@ private void showCard(String cardName) {
                             .addComponent(jLabel7)
                             .addComponent(jButton5))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))
+                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)))
                 .addGap(35, 35, 35))
         );
 
