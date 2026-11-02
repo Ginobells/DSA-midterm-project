@@ -152,10 +152,13 @@ private void showCard(String cardName) {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-id-20.png"))); // NOI18N
         jLabel2.setText("Patient ID");
 
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-name-tag-20.png")); // NOI18N
         jLabel3.setText("Patient Name");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-age-20.png")); // NOI18N
         jLabel4.setText("Age");
 
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-look-for-20.png")); // NOI18N
         jLabel5.setText("Reason For Visit");
 
         txtPatientID.addActionListener(this::txtPatientIDActionPerformed);
@@ -166,6 +169,7 @@ private void showCard(String cardName) {
         jButton2.setText("Save / Register");
         jButton2.addActionListener(this::jButton2ActionPerformed);
 
+        jButton10.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-back-20.png")); // NOI18N
         jButton10.setText("Back");
         jButton10.addActionListener(this::jButton10ActionPerformed);
 
@@ -195,16 +199,16 @@ private void showCard(String cardName) {
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43))))
             .addGroup(txtRegisterPatientLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
+                .addGap(203, 203, 203)
                 .addComponent(jLabel1)
-                .addGap(0, 302, Short.MAX_VALUE))
+                .addGap(0, 220, Short.MAX_VALUE))
         );
         txtRegisterPatientLayout.setVerticalGroup(
             txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(txtRegisterPatientLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(32, 32, 32)
+                .addGap(33, 33, 33)
                 .addGroup(txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
