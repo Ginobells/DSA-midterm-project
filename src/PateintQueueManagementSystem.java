@@ -263,12 +263,12 @@ private void showCard(String cardName) {
             .addGroup(txtDisplayLayout.createSequentialGroup()
                 .addGroup(txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(txtDisplayLayout.createSequentialGroup()
-                        .addGap(56, 56, 56)
+                        .addGap(108, 108, 108)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(txtDisplayLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
+                        .addGap(178, 178, 178)
                         .addComponent(jLabel6)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         txtDisplayLayout.setVerticalGroup(
             txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -533,15 +533,15 @@ private void showCard(String cardName) {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-  new Dashboard().setVisible(true);
+    new Dashboard().setVisible(true);
     this.dispose();
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-  new Dashboard().setVisible(true);
+   new Dashboard().setVisible(true);
     this.dispose();
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
