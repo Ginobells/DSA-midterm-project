@@ -16,7 +16,7 @@ public static int getRegisteredCount() {
 public static int getWaitingCount() {
     return waitingQueue.size();
 }
-    public static boolean registerPatient(Patient patient) {
+public static boolean registerPatient(Patient patient) {
 
         if (allPatients.containsKey(patient.getId())) {
             return false;
@@ -28,15 +28,15 @@ public static int getWaitingCount() {
         return true;
     }
 
-    public static Patient callNextPatient() {
+public static Patient callNextPatient() {
         return waitingQueue.poll();
     }
 
-    public static Queue<Patient> getWaitingPatients() {
+public static Queue<Patient> getWaitingPatients() {
         return new LinkedList<>(waitingQueue);
     }
 
-    public static Patient searchPatient(String id) {
+public static Patient searchPatient(String id) {
         return allPatients.get(id);
     }
 }
