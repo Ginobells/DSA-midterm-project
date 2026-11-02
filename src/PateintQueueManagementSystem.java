@@ -354,13 +354,13 @@ private void showCard(String cardName) {
 
     private void txtWaitingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWaitingActionPerformed
 
-    displayWaitingPatients();
-    showCard("card3");
+   displayWaitingPatients();
+   showCard("card3");
 
    
 
 
-                  // TODO add your handling code here:
+                  
     }//GEN-LAST:event_txtWaitingActionPerformed
 
     private void txtregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtregisterActionPerformed
