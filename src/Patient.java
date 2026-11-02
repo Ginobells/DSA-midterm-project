@@ -1,4 +1,3 @@
-
 public class Patient {
 
     private String txtid;
@@ -7,9 +6,9 @@ public class Patient {
     private String txtreason;
 
     public Patient(String id, String name, int age, String reason) {
-        this.txtid = id;
+        this.txtid   = id;
         this.txtname = name;
-        this.txtage = age;
+        this.txtage  = age;
         this.txtreason = reason;
     }
 
