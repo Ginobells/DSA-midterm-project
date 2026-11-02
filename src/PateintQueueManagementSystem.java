@@ -100,6 +100,7 @@ private void showCard(String cardName) {
 
         jPanel2.setBackground(new java.awt.Color(102, 204, 255));
 
+        txtregister.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-register-24.png")); // NOI18N
         txtregister.setText("Register Patient");
         txtregister.addActionListener(this::txtregisterActionPerformed);
 
@@ -123,7 +124,7 @@ private void showCard(String cardName) {
                 .addComponent(txtWaiting)
                 .addGap(44, 44, 44)
                 .addComponent(jButton8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(txtsearch)
                 .addContainerGap())
         );
@@ -224,7 +225,7 @@ private void showCard(String cardName) {
                 .addGroup(txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtReason, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(txtRegisterPatientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
@@ -272,7 +273,7 @@ private void showCard(String cardName) {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
                 .addGroup(txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -333,7 +334,7 @@ private void showCard(String cardName) {
                             .addComponent(jLabel7)
                             .addComponent(jButton5))
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
+                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))
                 .addGap(35, 35, 35))
         );
 
