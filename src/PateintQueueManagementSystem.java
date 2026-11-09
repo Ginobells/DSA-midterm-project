@@ -1,24 +1,22 @@
 
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 import java.awt.CardLayout;
-import java.util.Queue;
+
 
 public class PateintQueueManagementSystem extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PateintQueueManagementSystem.class.getName());
-
+    
 private CardLayout cardLayout;
 
     /**
      * Creates new form PateintQueueManagementSystem
      */
     
+
 public PateintQueueManagementSystem() {
+
     initComponents();
-ParentPanel.add(txtRegisterPatient, "card5");
-ParentPanel.add(txtDisplay, "card3");
-ParentPanel.add(txtSearch, "card2");
+
     cardLayout = (CardLayout) ParentPanel.getLayout();
 
     setLocationRelativeTo(null);
@@ -26,32 +24,45 @@ ParentPanel.add(txtSearch, "card2");
     showCard("card5");
 }
 
+
 private void displayWaitingPatients() {
 
     StringBuilder result = new StringBuilder();
 
-    Queue<Patient> patients = ClinicQueue.getWaitingPatients();
+    if (ClinicQueue.getWaitingCount() == 0) {
 
-    if (patients.isEmpty()) {
         result.append("No waiting patients.");
+
     } else {
 
-        int number = 1;
+        for (int i = 0;
+             i < ClinicQueue.getWaitingCount();
+             i++) {
 
-        for (Patient p : patients) {
+            Patient patient =
+                    ClinicQueue.getWaitingPatientAt(i);
 
-            result.append(number++)
-                  .append(".  ")
-                  .append(p.toString())
-                  .append("\n\n");
+            result.append("Patient Number: ")
+                  .append(i + 1)
+                  .append("\n");
+
+            result.append(patient.toString());
+
+            result.append("\n\n\n\n");
         }
     }
 
-    jTextField5.setText(result.toString());
+    txtarea.setText(result.toString());
 }
 
+
+
+ 
+
 private void showCard(String cardName) {
+
     cardLayout.show(ParentPanel, cardName);
+
     ParentPanel.revalidate();
     ParentPanel.repaint();
 }
@@ -85,16 +96,18 @@ private void showCard(String cardName) {
         jButton10 = new javax.swing.JButton();
         txtDisplay = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtarea = new javax.swing.JTextArea();
         txtSearch = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
-        jTextField8 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtarea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,6 +182,8 @@ private void showCard(String cardName) {
 
         txtPatientName.addActionListener(this::txtPatientNameActionPerformed);
 
+        txtAge.addActionListener(this::txtAgeActionPerformed);
+
         jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\S-300V5A\\Downloads\\icons8-register-24.png")); // NOI18N
         jButton2.setText("Save / Register");
         jButton2.addActionListener(this::jButton2ActionPerformed);
@@ -242,13 +257,15 @@ private void showCard(String cardName) {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel6.setText("Waiting Patient");
 
-        jTextField5.addActionListener(this::jTextField5ActionPerformed);
-
         jButton1.setText("Call Next Patient");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
         jButton3.setText("Back To Dashboard");
         jButton3.addActionListener(this::jButton3ActionPerformed);
+
+        txtarea.setColumns(20);
+        txtarea.setRows(5);
+        jScrollPane1.setViewportView(txtarea);
 
         javax.swing.GroupLayout txtDisplayLayout = new javax.swing.GroupLayout(txtDisplay);
         txtDisplay.setLayout(txtDisplayLayout);
@@ -266,18 +283,18 @@ private void showCard(String cardName) {
                         .addGap(178, 178, 178)
                         .addComponent(jLabel6))
                     .addGroup(txtDisplayLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                        .addGap(85, 85, 85)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
         txtDisplayLayout.setVerticalGroup(
             txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(txtDisplayLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(txtDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
@@ -301,46 +318,48 @@ private void showCard(String cardName) {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel8.setText("Search Patient By ID");
 
+        txtarea1.setColumns(20);
+        txtarea1.setRows(5);
+        jScrollPane2.setViewportView(txtarea1);
+
         javax.swing.GroupLayout txtSearchLayout = new javax.swing.GroupLayout(txtSearch);
         txtSearch.setLayout(txtSearchLayout);
         txtSearchLayout.setHorizontalGroup(
             txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(txtSearchLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(txtSearchLayout.createSequentialGroup()
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(jButton5))
-                    .addComponent(jLabel8))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(txtSearchLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(17, 17, 17))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addComponent(jButton4)
+                        .addGap(15, 15, 15))
+                    .addGroup(txtSearchLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(txtSearchLayout.createSequentialGroup()
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(47, 47, 47)
+                                .addComponent(jButton5))
+                            .addComponent(jLabel8))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         txtSearchLayout.setVerticalGroup(
             txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, txtSearchLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel8)
+                .addGap(46, 46, 46)
+                .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jButton5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(txtSearchLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4))
-                    .addGroup(txtSearchLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel8)
-                        .addGap(46, 46, 46)
-                        .addGroup(txtSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(jButton5))
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)))
-                .addGap(35, 35, 35))
+                    .addComponent(jButton4)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15))
         );
 
         ParentPanel.add(txtSearch, "card2");
@@ -358,20 +377,18 @@ private void showCard(String cardName) {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPatientIDActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
     private void txtWaitingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWaitingActionPerformed
 
-   displayWaitingPatients();
-   showCard("card3");
+    displayWaitingPatients();
+    showCard("card3");
+
               
     }//GEN-LAST:event_txtWaitingActionPerformed
 
     private void txtregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtregisterActionPerformed
 
     showCard("card5");
+
 
     
      // TODO add your handling code here:
@@ -383,6 +400,7 @@ private void showCard(String cardName) {
     String ageText = txtAge.getText().trim();
     String reason = txtReason.getText().trim();
 
+    // Check empty fields
     if (id.isEmpty() || name.isEmpty()
             || ageText.isEmpty() || reason.isEmpty()) {
 
@@ -391,11 +409,31 @@ private void showCard(String cardName) {
         return;
     }
 
-    try {
+    // Patient ID must contain numbers only
+    if (!id.matches("[0-9]+")) {
+        JOptionPane.showMessageDialog(this,
+                "Patient ID must contain numbers only!");
+        return;
+    }
 
+    // Name must contain letters and spaces only
+    if (!name.matches("[\\p{L} ]+")) {
+        JOptionPane.showMessageDialog(this,
+                "Name must contain letters only!");
+        return;
+    }
+
+    // Age must contain numbers only
+    if (!ageText.matches("[0-9]+")) {
+        JOptionPane.showMessageDialog(this,
+                "Age must contain numbers only!");
+        return;
+    }
+
+    try {
         int age = Integer.parseInt(ageText);
 
-        if (age <= 0) {
+        if (age <= 0 || age > 120) {
             JOptionPane.showMessageDialog(this,
                     "Please enter a valid age!");
             return;
@@ -416,22 +454,22 @@ private void showCard(String cardName) {
             displayWaitingPatients();
 
         } else {
-
             JOptionPane.showMessageDialog(this,
-                    "Patient ID already exists!");
+                    "Patient ID already exists or queue is full!");
         }
 
     } catch (NumberFormatException e) {
-
         JOptionPane.showMessageDialog(this,
-                "Age must contain numbers only!");
+                "Invalid age!");
     }
+
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
  
-
- Patient patient = ClinicQueue.callNextPatient();
+    Patient patient = ClinicQueue.callNextPatient();
 
     if (patient == null) {
 
@@ -441,53 +479,20 @@ private void showCard(String cardName) {
     } else {
 
         JOptionPane.showMessageDialog(this,
-                "NOW SERVING\n\n"
-                + "Patient ID: " + patient.getId()
-                + "\nName: " + patient.getName()
-                + "\nAge: " + patient.getAge()
-                + "\nReason: " + patient.getReason());
-
+                "NOW SERVING!\n\n"
+                + patient.toString());
     }
 
     displayWaitingPatients();
+
 
     
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void txtsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtsearchActionPerformed
-  showCard("card2");
-
-        
-        
-        
-        /*String id = jTextField9.getText().trim();
-
-    if (id.isEmpty()) {
-
-        JOptionPane.showMessageDialog(this,
-                "Please enter Patient ID!");
-        return;
-    }
-
-    Patient patient = ClinicQueue.searchPatient(id);
-
-    if (patient != null) {
-
-        jTextField8.setText(
-                "PATIENT FOUND!\n\n"
-                + "Patient ID: " + patient.getId()
-                + "\nName: " + patient.getName()
-                + "\nAge: " + patient.getAge()
-                + "\nReason: " + patient.getReason()
-        );
-
-    } else {
-
-        jTextField8.setText("Patient not found!");
-    }
-*/
-
  
+    showCard("card2");
+
     // TODO add your handling code here:
     }//GEN-LAST:event_txtsearchActionPerformed
 
@@ -501,13 +506,13 @@ private void showCard(String cardName) {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
 
-
     String id = jTextField9.getText().trim();
 
     if (id.isEmpty()) {
 
         JOptionPane.showMessageDialog(this,
                 "Please enter Patient ID!");
+
         return;
     }
 
@@ -515,18 +520,17 @@ private void showCard(String cardName) {
 
     if (patient != null) {
 
-        jTextField8.setText(
-                "PATIENT FOUND!\n\n"
-                + "Patient ID: " + patient.getId()
-                + "\nName: " + patient.getName()
-                + "\nAge: " + patient.getAge()
-                + "\nReason: " + patient.getReason()
+        txtarea1.setText(
+                "PATIENT FOUND! | "
+                + patient.toString().replace("\n", " | ")
         );
 
     } else {
 
-        jTextField8.setText("Patient not found!");
+        txtarea1.setText("PATIENT NOT FOUND!");
     }
+
+
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -565,6 +569,10 @@ Patient patient = ClinicQueue.callNextPatient();
     displayWaitingPatients();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAgeActionPerformed
 public void showRegisterPatient() {
 
 }
@@ -577,21 +585,10 @@ public void showRegisterPatient() {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new PateintQueueManagementSystem().setVisible(true));
-    }
+  java.awt.EventQueue.invokeLater(() -> {
+        new PateintQueueManagementSystem().setVisible(true);
+    });
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ParentPanel;
@@ -611,8 +608,8 @@ public void showRegisterPatient() {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField txtAge;
     private javax.swing.JPanel txtDisplay;
@@ -622,6 +619,8 @@ public void showRegisterPatient() {
     private javax.swing.JPanel txtRegisterPatient;
     private javax.swing.JPanel txtSearch;
     private javax.swing.JButton txtWaiting;
+    private javax.swing.JTextArea txtarea;
+    private javax.swing.JTextArea txtarea1;
     private javax.swing.JButton txtregister;
     private javax.swing.JButton txtsearch;
     // End of variables declaration//GEN-END:variables

@@ -1,35 +1,39 @@
+
 public class Patient {
 
-    private String txtid;
-    private String txtname;
-    private int txtage;
-    private String txtreason;
+    private String id;
+    private String name;
+    private int age;
+    private String reason;
 
     public Patient(String id, String name, int age, String reason) {
-        this.txtid   = id;
-        this.txtname = name;
-        this.txtage  = age;
-        this.txtreason = reason;
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.reason = reason;
     }
 
     public String getId() {
-        return txtid;
+        return id;
     }
 
     public String getName() {
-        return txtname;
+        return name;
     }
 
     public int getAge() {
-        return txtage;
+        return age;
     }
 
     public String getReason() {
-        return txtreason;
+        return reason;
     }
 
     @Override
     public String toString() {
-        return txtid + " - " + txtname + " - " + txtage + " - " + txtreason;
+        return "Patient ID: " + id
+                + "\nName: " + name
+                + "\nAge: " + age
+                + "\nReason: " + reason;
     }
 }
