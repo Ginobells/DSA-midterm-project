@@ -18,7 +18,7 @@ public class ClinicQueue {
 
 
     // Register Patient
-    public static boolean registerPatient(Patient patient) {
+    public static boolean registerPatient(Patient patient) { 
 
         if (patient == null) {
             return false;
