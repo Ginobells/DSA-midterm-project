@@ -16,7 +16,7 @@ private CardLayout cardLayout;
 public PateintQueueManagementSystem() {
 
     initComponents();
-  cardLayout = (CardLayout) ParentPanel.getLayout();
+   cardLayout = (CardLayout) ParentPanel.getLayout();
     setLocationRelativeTo(null);
     showCard("card5");
 }
